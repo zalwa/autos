@@ -11,13 +11,13 @@ sh "ls -l"
 
 stage('Build docker image'){
 
-sh "docker build -t docker_test:latest ."
+sh "docker build -t autosh:latest ."
 }
 
 stage('Docker login to hub and push the image'){
-sh "docker login -u 'botieno5' -p 'otieno' "
-sh "docker tag docker_test:latest botieno5/docker_test:latest"
-sh "docker push botieno5/docker_test:latest"
+sh "docker login -u 'zalwa' -p 'Josiah_15' "
+sh "docker tag autosh:latest zalwa/autosh:latest"
+sh "docker push zalwa/autosh:latest"
 }
 
 stage('Apply changes to the environment') {
